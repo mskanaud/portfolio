@@ -1,0 +1,19 @@
+@import "variable";
+
+@mixin margin($property, $value) {
+	  margin-#{$property}: $value;
+}
+@mixin flex {
+	display: flex;
+}
+@mixin alignCenter {
+	justify-content:center;
+	align-items:center;
+}
+@mixin flexCenter {
+	@include flex;
+	@include alignCenter;
+}
+@mixin baseColor {
+	color: $mainColor !important;
+}
