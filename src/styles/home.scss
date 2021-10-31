@@ -1,9 +1,32 @@
 @import "variable";
 
-.home_container {
-  height: $fullHeight;
-}
+
 body {
   margin: 0;
-  background: $bgDefault;
+}
+
+.home_container {
+  display: flex;
+  width: $fullWidth;
+  height: $fullHeight;
+  
+  .menu {
+    width: 100vw;
+    height: 80px;
+    justify-content: space-between;
+    display: flex;
+   
+    .icon-container {
+      margin-top: 35px;
+      margin-left: 50px;
+    }
+    .button-container {
+      margin-top: 50px;
+      margin-right: 50px;
+    }
+  }
+  .icon-label {
+    background-color: #fff !important;
+    color: $mainColor !important;
+  }
 }
