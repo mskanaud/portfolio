@@ -1,6 +1,9 @@
 @import "variable";
 
 .home_container {
-  background: $bgDefault;
   height: $fullHeight;
+}
+body {
+  margin: 0;
+  background: $bgDefault;
 }

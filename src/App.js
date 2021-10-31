@@ -1,7 +1,8 @@
-import './styles/home.scss';
+import Home from './containers/Home';
 
 const App = () => (
-    <div className="home_container">
+    <div className="">
+      <Home />
     </div>
 );
 
