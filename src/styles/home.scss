@@ -1,62 +1,59 @@
 @import "variable";
 @import "mixins";
+@import "animations";
 
-body {
-  margin: 0;
-  font-family: 'EuroStyle';
-}
+.home-container {
+    .menu {
+        width: 100vw;
+        height: 80px;
+        justify-content: space-between;
+        display: flex;
 
-.home_container {
-  display: flex;
-  width: $fullWidth;
-  height: $fullHeight;    
-  flex-direction: column;
-  
-  .menu {
-    width: 100vw;
-    height: 80px;
-    justify-content: space-between;
-    display: flex;
-   
-    .icon-container {
-      margin-top: 35px;
-      margin-left: 50px;
+        .icon-container {
+            margin-top: 35px;
+            margin-left: 50px;
+        }
+        .button-container {
+            margin-top: 50px;
+            margin-right: 50px;
+        }
     }
-    .button-container {
-      margin-top: 50px;
-      margin-right: 50px;
+    .icon-label {
+        background-color: #fff !important;
+        color: $mainColor !important;
     }
-  }
-  .icon-label {
-    background-color: #fff !important;
-    color: $mainColor !important;
-  }
-  .description {
-    @include margin(top, 80px);
-    @include flexCenter;
-    text-align: center;
-  }
-  .base-color {
-    @include baseColor;
-  }
-  .typewriter{
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .1em solid $mainColor; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    animation: 
-      typing 5s steps(50, end),
-      blink-caret 3s step-end infinite;
-  }
+    .description {
+        @include margin(top, 80px);
+        @include flexCenter;
+        text-align: center;
+        flex-direction: column;
+        height: 100%;
 
-  /* The typing effect */
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: $mainColor; }
-  }
+        .p-text {
+            font-size: 1.4rem;
+            line-height: 4rem;
+        }
+        .msk-avatar {
+            @include flexCenter;
+        }
+        .bottom-content {
+            height: 100%;
+            justify-content: center;
+            display: flex;
+            align-items: self-end;
+            @include margin(bottom, 30px);
+        }
+    }
+    .base-color {
+        @include baseColor;
+    }
+    .typewriter {
+        @include typewriter;
+    }
+    .full-height-width-flex {
+        @include fullHeightWidth;   
+        display: flex; 
+        flex-direction: column;
+    }
+    
 }
