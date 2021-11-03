@@ -18,10 +18,12 @@
             margin-right: 50px;
         }
     }
+    
     .icon-label {
         background-color: #fff !important;
         color: $mainColor !important;
     }
+    
     .description {
         @include margin(top, 80px);
         @include flexCenter;
@@ -50,10 +52,54 @@
     .typewriter {
         @include typewriter;
     }
-    .full-height-width-flex {
+    .flex-full-page {
         @include fullHeightWidth;   
-        display: flex; 
+        @include flex;
+        min-height: 800px;
         flex-direction: column;
+    }
+
+    .second-page{
+        height: 100%;
+        width: 100%;
+        @include flex;
+
+        .skill-description {
+            @include baseBg;
+            @include flexCenter;
+            flex-direction:column;
+            height: 50%;
+            width: 100%;
+        }
+        .heading {
+            @include margin(top, 40px);
+            @include flexCenter;
+            text-align: center;
+            flex:1;
+            flex-direction: column;
+        }
+        .skill-group {
+            flex:4;
+            width: 80%;
+            text-align: center;
+            .skill-group-set {
+                padding:10px;
+                @include flexCenter;
+                flex-direction: column;
+            }
+            .skill-icon-container {
+                width: 90px;
+                height: 90px;
+                border-radius: 50%;
+                background-color: #fff;
+                @include flexCenter;
+
+            }
+        }
+        .skill-container {
+            @include margin(top, 30px);
+            @include flex;
+        }
     }
     
 }
