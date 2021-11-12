@@ -3,6 +3,7 @@ import '../styles/home.scss';
 import MenuBar from './MenuBar';
 import FirstPage from './home/FirstPage';
 import SecondPage from './home/SecondPage';
+import ThirdPage from './home/ThirdPage';
 
 const Home = () => {
 	return(
@@ -15,6 +16,7 @@ const Home = () => {
 				<SecondPage />
 			</div>
 			<div className="flex-full-page">
+				<ThirdPage />
 			</div>
 		</div>
 
