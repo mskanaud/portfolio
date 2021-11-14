@@ -3,27 +3,6 @@
 @import "animations";
 
 .home-container {
-    .menu {
-        width: 100vw;
-        height: 80px;
-        justify-content: space-between;
-        display: flex;
-
-        .icon-container {
-            margin-top: 35px;
-            margin-left: 50px;
-        }
-        .button-container {
-            margin-top: 50px;
-            margin-right: 50px;
-        }
-    }
-    
-    .icon-label {
-        background-color: #fff !important;
-        color: $mainColor !important;
-    }
-    
     .description {
         @include margin(top, 80px);
         @include flexCenter;
@@ -46,19 +25,9 @@
             @include margin(bottom, 30px);
         }
     }
-    .base-color {
-         @include baseColor;
-    }
     .typewriter {
         @include typewriter;
     }
-    .flex-full-page {
-        @include fullHeightWidth;   
-        @include flex;
-        min-height: 800px;
-        flex-direction: column;
-    }
-
     .second-page{
         height: 100%;
         width: 100%;
@@ -160,8 +129,4 @@
             flex:1;
         }
     }
-    .flex-center {
-        @include flexCenter;
-    }
-    
 }

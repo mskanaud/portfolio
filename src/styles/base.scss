@@ -1,0 +1,19 @@
+@import "mixins";
+
+.flex-full-page {
+    @include fullHeightWidth;   
+    @include flex;
+    min-height: 800px;
+    flex-direction: column;
+}
+.icon-label {
+    background-color: #fff !important;
+    color: $mainColor !important;
+}
+
+.base-color {
+    @include baseColor;
+}
+.flex-center {
+    @include flexCenter;
+}
